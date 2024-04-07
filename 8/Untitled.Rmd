@@ -1,0 +1,65 @@
+---
+title: "Untitled"
+author: "Zhou Xulin"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+<br> \## Including Plots
+
+You can also embed plots, for example:
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+
+
+```{r, eval= TRUE, echo=TRUE}
+#(1) List of Visualizations:
+#Time Series Plots:
+
+
+#Purpose: To visualize trends, patterns, and changes over time, answering questions about how the main variable fluctuates over time and identifying potential relationships or correlations.
+#Why: Time series plots are effective in showcasing temporal patterns, making it easier to identify trends and seasonality in the data.
+#Scatter Plots:
+
+
+#Purpose: To explore the relationship between two variables, identifying potential correlations, clusters, or outliers.
+#Why: Scatter plots are useful for visualizing the relationship between two continuous variables, allowing for the identification of patterns or trends in the data.
+#Histograms:
+
+#Variables: Distribution of a single variable
+#Purpose: To visualize the distribution of a variable and understand its shape, central tendency, and variability.
+#Why: Histograms provide insights into the distributional characteristics of a variable, helping to identify patterns such as skewness, kurtosis, or multimodality.
+#Box Plots:
+
+#Variables: One categorical variable and one continuous variable
+#Purpose: To compare the distribution of a continuous variable across different categories and identify potential outliers or differences in central tendency.
+#Why: Box plots provide a visual summary of the distribution of a variable, highlighting variations across different groups or categories.
+#Heatmaps:
+
+#Variables: Two categorical variables and one continuous variable (optional)
+#Purpose: To visualize the relationship between two categorical variables and, optionally, a continuous variable, showing the frequency or intensity of occurrence.
+#Why: Heatmaps are effective in displaying dense data and identifying patterns or clusters in categorical data.
+#(2) Interactivity Plan:
+#To make the project interactive, I plan to use the following features:
+
+#Shiny: Incorporate interactive elements such as sliders, drop-down menus, or checkboxes to allow users to dynamically explore different aspects of the data.
+#ggplot2: Utilize interactive features available in ggplot2 such as tooltips or zooming functionality to enhance user experience and provide additional information on data points.

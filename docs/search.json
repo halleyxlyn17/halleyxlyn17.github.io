@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "halleyxlyn17.github.io",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "website/about.html",
+    "href": "website/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "website/index.html",
+    "href": "website/index.html",
+    "title": "website",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "8/Untitled.html",
+    "href": "8/Untitled.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n ## Including Plots\nYou can also embed plots, for example:\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n\n#What is the topic that you have finalized? (Answer in 1 or 2 sentences)\n\n#Topic: Spotify songs, their popularity and hits\n\n#(2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).\n# Popular_Spotify_Songs.csv"
+  },
+  {
+    "objectID": "8/Untitled.html#r-markdown",
+    "href": "8/Untitled.html#r-markdown",
+    "title": "Untitled",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n ## Including Plots\nYou can also embed plots, for example:\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n\n#What is the topic that you have finalized? (Answer in 1 or 2 sentences)\n\n#Topic: Spotify songs, their popularity and hits\n\n#(2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).\n# Popular_Spotify_Songs.csv"
+  }
+]
