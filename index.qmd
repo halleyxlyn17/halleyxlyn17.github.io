@@ -2,68 +2,240 @@
 title: "halleyxlyn17.github.io"
 ---
 
-About this site
-Welcome to Xulin's Website!
+About this site Welcome to Xulin's Website!
 
 Introduction:The GBD Study 2010 estimated the burden of diseases, injuries, and risk factors globally and for 21 regions for 1990 and 2010.
 
-The dataset provides number of deaths and mortality rates for 187 countries, 21 regions, and globally by age group and sex, for 1970, 1980, 1990, 2000 and 2010. The other provides the probabilities of dying between the ages of 15 and 60 (45q15), the probabilities of dying between birth and age 5 (5q0), and mean ages of death for the same geographies and years, and by sex. 
+The dataset provides number of deaths and mortality rates for 187 countries, 21 regions, and globally by age group and sex, for 1970, 1980, 1990, 2000 and 2010. The other provides the probabilities of dying between the ages of 15 and 60 (45q15), the probabilities of dying between birth and age 5 (5q0), and mean ages of death for the same geographies and years, and by sex.
 
 ```{r}
-read.csv("/Users/halleyzhou/Documents/dataset.csv")
+read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 ```
 
 ```{r}
 library(shiny)
-library(readr)
+library(ggplot2)
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Scatterplot"),
+  
+  # Application title
+  titlePanel("Scatterplot Example"),
+  
+  # Sidebar layout with input and output definitions
   sidebarLayout(
     sidebarPanel(
+      # Input: Upload CSV file
       fileInput("file", "Choose CSV File",
-                accept = c(".csv"))
+                accept = c(".csv")),
+      # Input: Choose columns for x and y axes
+      selectInput(inputId = "x_column",
+                  label = "Choose a column for x-axis:",
+                  choices = NULL),
+      selectInput(inputId = "y_column",
+                  label = "Choose a column for y-axis:",
+                  choices = NULL)
     ),
+    
+    # Main panel for displaying outputs
     mainPanel(
-      plotOutput("scatterplot")
+      # Output: Scatterplot
+      plotOutput(outputId = "scatterplot")
     )
   )
 )
 
 # Define server logic
-server <- function(input, output) {
-  # Read the CSV file
+server <- function(input, output, session) {
+  
+  # Read uploaded CSV file
   data <- reactive({
     req(input$file)
-    read_csv(input$file$datapath)
+    read.csv(input$file$datapath)
   })
-
+  
+  # Update column choices when file is uploaded
+  observe({
+    col_choices <- names(data())
+    updateSelectInput(session, "x_column", choices = col_choices)
+    updateSelectInput(session, "y_column", choices = col_choices)
+  })
+  
+  # Render the scatterplot based on selected columns
   output$scatterplot <- renderPlot({
-    req(data())
-    plot(data()$x, data()$y, main = "Scatterplot", xlab = "X", ylab = "Y")
+    req(input$file)
+    req(input$x_column)
+    req(input$y_column)
+    
+    ggplot(data(), aes_string(x = input$x_column, y = input$y_column)) +
+      geom_point() +
+      labs(title = "Scatterplot", x = input$x_column, y = input$y_column)
   })
+  
 }
 
 # Run the application
 shinyApp(ui = ui, server = server)
-```       
 
-```{=html}
-https://harleyxlyn17.shinyapps.io/halleysapp/
-<iframe height="400" width="100%" frameborder="no" src="https://datasciencegenie.shinyapps.io/MyShinyApp/"> </iframe>
 ```
 
 ```{r}
+library(ggplot2)
 
-# Install and load the png package
 
-library(png)
+data <- read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 
-# Read the PNG image
-img <- readPNG("/Users/halleyzhou/Documents/WechatIMG302.jpg")
-print(img)
 
+ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
+  geom_point(color = "blue", size = 3) +
+  labs(title = "Scatterplot", x = "X-axis", y = "Y-axis") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    axis.line = element_line(color = "red"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    panel.background = element_blank()
+  )
 
 ```
 
+Scatterplot App:
+```{r}
+library(shiny)
+library(ggplot2)
+
+# Define UI
+ui <- fluidPage(
+  
+  # Application title
+  titlePanel("Scatterplot Example"),
+  
+  # Sidebar layout with input and output definitions
+  sidebarLayout(
+    sidebarPanel(
+      # Input: Upload CSV file
+      fileInput("file", "Choose CSV File",
+                accept = c(".csv")),
+      # Input: Choose columns for x and y axes
+      selectInput(inputId = "x_column",
+                  label = "Choose a column for x-axis:",
+                  choices = NULL),
+      selectInput(inputId = "y_column",
+                  label = "Choose a column for y-axis:",
+                  choices = NULL)
+    ),
+    
+    # Main panel for displaying outputs
+    mainPanel(
+      # Output: Scatterplot
+      plotOutput(outputId = "scatterplot")
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output, session) {
+  
+  # Read uploaded CSV file
+  data <- reactive({
+    req(input$file)
+    read.csv(input$file$datapath)
+  })
+  
+  # Update column choices when file is uploaded
+  observe({
+    col_choices <- names(data())
+    updateSelectInput(session, "x_column", choices = col_choices)
+    updateSelectInput(session, "y_column", choices = col_choices)
+  })
+  
+  # Render the scatterplot based on selected columns
+  output$scatterplot <- renderPlot({
+    req(input$file)
+    req(input$x_column)
+    req(input$y_column)
+    
+    ggplot(data(), aes_string(x = input$x_column, y = input$y_column)) +
+      geom_point() +
+      labs(title = "Scatterplot", x = input$x_column, y = input$y_column)
+  })
+  
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+```
+
+Bar Chart App:
+```{r}
+library(shiny)
+library(ggplot2)
+
+# Define UI
+ui <- fluidPage(
+  
+  # Application title
+  titlePanel("Bar Chart Example"),
+  
+  # Sidebar layout with input and output definitions
+  sidebarLayout(
+    sidebarPanel(
+      # Input: Upload CSV file
+      fileInput("file", "Choose CSV File",
+                accept = c(".csv")),
+      # Input: Choose column for x-axis
+      selectInput(inputId = "x_column",
+                  label = "Choose a column for x-axis:",
+                  choices = NULL),
+      # Input: Choose column for y-axis
+      selectInput(inputId = "y_column",
+                  label = "Choose a column for y-axis:",
+                  choices = NULL)
+    ),
+    
+    # Main panel for displaying outputs
+    mainPanel(
+      # Output: Bar chart
+      plotOutput(outputId = "barplot")
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output, session) {
+  
+  # Read uploaded CSV file
+  data <- reactive({
+    req(input$file)
+    read.csv(input$file$datapath)
+  })
+  
+  # Update column choices when file is uploaded
+  observe({
+    col_choices <- names(data())
+    updateSelectInput(session, "x_column", choices = col_choices)
+    updateSelectInput(session, "y_column", choices = col_choices)
+  })
+  
+  # Render the bar chart based on selected columns
+  output$barplot <- renderPlot({
+    req(input$file)
+    req(input$x_column)
+    req(input$y_column)
+    
+    ggplot(data(), aes_string(x = input$x_column, y = input$y_column)) +
+      geom_bar(stat = "identity") +
+      labs(title = "Bar Chart", x = input$x_column, y = input$y_column)
+  })
+  
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+
+
+```
