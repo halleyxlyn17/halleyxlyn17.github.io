@@ -52,3 +52,7 @@ Scatterplot App:
 "https://harleyxlyn17.shinyapps.io/app_3/"></iframe>
 
 ```
+
+```{=html}
+<iframe height = "400" width = "100%" src =
+https://harleyxlyn17.shinyapps.io/app_2/"></iframe>

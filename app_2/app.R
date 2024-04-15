@@ -23,3 +23,5 @@ server <- function(input, output){
       geom_line(aes(x = Year, y = Gender.wage.gap..))
   })
 }
+
+shinyApp(ui, server)
