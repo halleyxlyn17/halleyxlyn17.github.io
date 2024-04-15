@@ -5,7 +5,7 @@ account: harleyxlyn17
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11763716
-bundleId: 8497153
+bundleId: 8497172
 url: https://harleyxlyn17.shinyapps.io/app_2/
 version: 1
 asMultiple: FALSE
