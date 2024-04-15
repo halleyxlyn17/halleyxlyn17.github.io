@@ -11,9 +11,20 @@ Despite progress in recent decades, these gaps continue to persist, albeit to a 
 ```{r}
 df = read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 ```
-
 ```{r}
 
+# Load the png package
+library(png)
+# Define the path to the image file
+image_path <- "/Users/halleyzhou/Documents/WechatIMG322.png"  # Replace with the path to your PNG file
+
+# Load the PNG image
+image <- readPNG(image_path)
+
+# Plot the image
+plot(1:2, type = "n", xlab = "", ylab = "", main = "")
+# The rasterImage() function allows you to place the image on the plot
+rasterImage(image, 1, 1, 2, 2)
 
 ```
 
@@ -40,30 +51,13 @@ ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
   )
 
 ```
-```{r}
-
-library(ggplot2)
 
 
-data <- read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 
 
-ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
- geom_bar(stat = "identity", fill = "steelblue", color = "white") +
-    geom_text(aes(label =Year), vjust = -0.3, color = "black", size = 3.5) +
-    theme_minimal() + # Use a minimal theme
-    ggtitle("Bar Chart") + # Title of the chart
-    xlab("Year") + # X-axis label
-    ylab("GenderWageGap") + # Y-axis label
-    theme(
-        plot.title = element_text(size = 14, face = "bold", hjust = 0.5), # Customize title
-        axis.title.x = element_text(size = 12), # Customize x-axis label
-        axis.title.y = element_text(size = 12), # Customize y-axis label
-        axis.text = element_text(size = 10) # Customize axis text
-    )
 
-print(p)
-```
+
+
 
 Scatterplot App:
 
