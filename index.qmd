@@ -26,7 +26,7 @@ data <- read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 
 ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
   geom_point(color = "blue", size = 3) +
-  labs(title = "Scatterplot", x = "X-axis", y = "Y-axis") +
+  labs(title = "Scatterplot", x = "Year", y = "Gender Wage Gap") +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
@@ -39,6 +39,30 @@ ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
     panel.background = element_blank()
   )
 
+```
+```{r}
+
+library(ggplot2)
+
+
+data <- read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
+
+
+ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
+ geom_bar(stat = "identity", fill = "steelblue", color = "white") +
+    geom_text(aes(label =Year), vjust = -0.3, color = "black", size = 3.5) +
+    theme_minimal() + # Use a minimal theme
+    ggtitle("Bar Chart") + # Title of the chart
+    xlab("Year") + # X-axis label
+    ylab("GenderWageGap") + # Y-axis label
+    theme(
+        plot.title = element_text(size = 14, face = "bold", hjust = 0.5), # Customize title
+        axis.title.x = element_text(size = 12), # Customize x-axis label
+        axis.title.y = element_text(size = 12), # Customize y-axis label
+        axis.text = element_text(size = 10) # Customize axis text
+    )
+
+print(p)
 ```
 
 Scatterplot App:
