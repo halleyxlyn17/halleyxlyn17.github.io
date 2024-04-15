@@ -11,22 +11,7 @@ Despite progress in recent decades, these gaps continue to persist, albeit to a 
 ```{r}
 df = read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 ```
-```{r}
 
-# Load the png package
-library(png)
-# Define the path to the image file
-image_path <- "/Users/halleyzhou/Documents/WechatIMG322.png"  # Replace with the path to your PNG file
-
-# Load the PNG image
-image <- readPNG(image_path)
-
-# Plot the image
-plot(1:2, type = "n", xlab = "", ylab = "", main = "")
-# The rasterImage() function allows you to place the image on the plot
-rasterImage(image, 1, 1, 2, 2)
-
-```
 
 ```{r}
 library(ggplot2)
@@ -64,13 +49,28 @@ Scatterplot App:
 ```{=html}
 <iframe height = "400" width = "100%" src = "https://harleyxlyn17.shinyapps.io/halleysapp/"></iframe>
 ```
-
+Bar Chart App:
 ```{=html}
 <iframe height = "400" width = "100%" src =
 "https://harleyxlyn17.shinyapps.io/app_3/"></iframe>
 
 ```
+```{r}
 
+# Load the png package
+library(png)
+# Define the path to the image file
+image_path <- "/Users/halleyzhou/Documents/WechatIMG322.png"  # Replace with the path to your PNG file
+
+# Load the PNG image
+image <- readPNG(image_path)
+
+# Plot the image
+plot(1:2, type = "n", xlab = "", ylab = "", main = "")
+# The rasterImage() function allows you to place the image on the plot
+rasterImage(image, 1, 1, 2, 2)
+
+```
 ```{=html}
 <iframe height = "400" width = "100%" src =
 "https://harleyxlyn17.shinyapps.io/app_2/"></iframe>
