@@ -139,6 +139,32 @@ print(graphicss)
 
 ```
 
+```{r}
+library(ggplot2)
+
+# Dados fornecidos
+dados <- data.frame(
+  pais = c("Honduras", "Nicaragua", "Argentina", "Belize", "Costa Rica", "Honduras", "Mexico", "Argentina", "Brazil", "Costa Rica", "Honduras", "Panama", "Uruguay", "Venezuela", "Argentina", "Brazil", "Chile", "Costa Rica", "Dominican Republic", "Honduras"),
+  codigo_pais = c("HND", "NIC", "ARG", "BLZ", "CRI", "HND", "MEX", "ARG", "BRA", "CRI", "HND", "PAN", "URY", "VEN", "ARG", "BRA", "CHL", "CRI", "DOM", "HND"),
+  ano = c(1993, 1993, 1994, 1994, 1994, 1994, 1994, 1995, 1995, 1995, 1995, 1995, 1995, 1995, 1996, 1996, 1996, 1996, 1996, 1996),
+  valor = c(20.45, 6.78, -2.27, 9.24, -0.68, 14.04, 16.87, 4.44, 24.14, 2.28, 21.13, 8.33, 16.32, 13.21, -2.33, 20.59, 17.37, -5.56, 22.12, 13.25)
+)
+
+# Criando o gráfico de linhas
+grafico_linhas <- ggplot(dados, aes(x = ano, y = valor, color = pais, group = pais)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Ano", y = "Valor", title = "Gráfico de Linhas") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Adicionando rótulos para os anos e os números finais
+grafico_final <- grafico_linhas +
+  geom_text(data = subset(dados, ano %in% unique(ano)), aes(label = valor), hjust = 0, vjust = -0.5, size = 3)
+
+print(grafico_final)
+```
+
 # Conclusion:
 
 The ongoing economic gender inequality impacts individuals, communities, and entire economies. Achieving gender equality in the economy is not only a moral duty but is crucial for promoting inclusive growth and long-term development. Empowering women economically boosts their personal well-being and aids in reducing poverty, enhancing productivity, and strengthening social cohesion. Additionally, bridging the gender gap in employment and entrepreneurship reveals untapped opportunities, encouraging innovation and boosting competitiveness in the global market.
