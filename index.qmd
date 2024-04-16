@@ -122,19 +122,19 @@ library(ggplot2)
 dados <- data.frame(
   pais = c("Brazil", "Brazil", "Brazil", "Brazil", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Brazil", "Costa Rica", "Mexico", "Panama", "Uruguay", "Venezuela", "Brazil", "Chile"),
   codigo_pais = c("BRA", "BRA", "BRA", "BRA", "BRA", "ARG", "BRA", "ARG", "BRA", "ARG", "BRA", "BRA", "CRI", "MEX", "PAN", "URY", "VEN", "BRA", "CHL"),
-  ano = c(1981, 1982, 1983, 1984, 1985, 1986, 1986, 1987, 1987, 1988, 1988, 1989, 1989, 1989, 1989, 1989, 1989, 1990, 1990),
-  valor = c(34.21, 33.66, 35.75, 34.04, 28.58, 15.79, 34.69, 12.5, 32.01, 11.31, 30.88, 33.33, 4.55, 20.58, 18.18, 22.22, 11.78, 26.11, 26.45)
+  Year = c(1981, 1982, 1983, 1984, 1985, 1986, 1986, 1987, 1987, 1988, 1988, 1989, 1989, 1989, 1989, 1989, 1989, 1990, 1990),
+  Gender_Wage_Gap = c(34.21, 33.66, 35.75, 34.04, 28.58, 15.79, 34.69, 12.5, 32.01, 11.31, 30.88, 33.33, 4.55, 20.58, 18.18, 22.22, 11.78, 26.11, 26.45)
 )
 
 
-grafico_dispersao <- ggplot(dados, aes(x = ano, y = valor, color = pais, label = codigo_pais)) +
+graphicss <- ggplot(dados, aes(x = ano, y = valor, color = pais, label = Year-Gap)) +
   geom_point(size = 3) +
   geom_text(size = 3, vjust = -0.5) +
-  labs(x = "Ano", y = "Valor", title = "Gráfico de Dispersão", color = "País") +
+  labs(x = "Year", y = " Gender_Wage_Gap", title = "Scatter Plot 2", color = "País") +
   theme_minimal() +
   theme(legend.position = "right")
 
-print(grafico_dispersao)
+print(graphicss)
 ```
 
 # Conclusion:
