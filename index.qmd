@@ -115,6 +115,28 @@ This indicates that Central America and South American countries have a higher t
 
 According to UNU Wider \[1\], Gender disparities in Latin America are significant. Women's labor force participation rate is 27 percentage points below that of men; women earn 17% less per hour than men with similar education and experience, and they hold less than 40% of top-level positions.
 
+```{r}
+library(ggplot2)
+
+
+dados <- data.frame(
+  pais = c("Brazil", "Brazil", "Brazil", "Brazil", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Brazil", "Costa Rica", "Mexico", "Panama", "Uruguay", "Venezuela", "Brazil", "Chile"),
+  codigo_pais = c("BRA", "BRA", "BRA", "BRA", "BRA", "ARG", "BRA", "ARG", "BRA", "ARG", "BRA", "BRA", "CRI", "MEX", "PAN", "URY", "VEN", "BRA", "CHL"),
+  ano = c(1981, 1982, 1983, 1984, 1985, 1986, 1986, 1987, 1987, 1988, 1988, 1989, 1989, 1989, 1989, 1989, 1989, 1990, 1990),
+  valor = c(34.21, 33.66, 35.75, 34.04, 28.58, 15.79, 34.69, 12.5, 32.01, 11.31, 30.88, 33.33, 4.55, 20.58, 18.18, 22.22, 11.78, 26.11, 26.45)
+)
+
+
+grafico_dispersao <- ggplot(dados, aes(x = ano, y = valor, color = pais, label = codigo_pais)) +
+  geom_point(size = 3) +
+  geom_text(size = 3, vjust = -0.5) +
+  labs(x = "Ano", y = "Valor", title = "Gráfico de Dispersão", color = "País") +
+  theme_minimal() +
+  theme(legend.position = "right")
+
+print(grafico_dispersao)
+```
+
 # Conclusion:
 
 The ongoing economic gender inequality impacts individuals, communities, and entire economies. Achieving gender equality in the economy is not only a moral duty but is crucial for promoting inclusive growth and long-term development. Empowering women economically boosts their personal well-being and aids in reducing poverty, enhancing productivity, and strengthening social cohesion. Additionally, bridging the gender gap in employment and entrepreneurship reveals untapped opportunities, encouraging innovation and boosting competitiveness in the global market.
@@ -122,3 +144,5 @@ The ongoing economic gender inequality impacts individuals, communities, and ent
 # Reference: 
 
 \[1\] “UNU-WIDER : Blog : Motherhood and the Gender Gap in Latin America.” UNU WIDER, 12 Aug. 2020, www.wider.unu.edu/publication/motherhood-and-gender-gap-latin-america.
+
+\[2\] dataset included:
