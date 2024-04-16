@@ -150,15 +150,15 @@ dados <- data.frame(
   valor = c(20.45, 6.78, -2.27, 9.24, -0.68, 14.04, 16.87, 4.44, 24.14, 2.28, 21.13, 8.33, 16.32, 13.21, -2.33, 20.59, 17.37, -5.56, 22.12, 13.25)
 )
 
-# Criando o gráfico de linhas
+
 grafico_linhas <- ggplot(dados, aes(x = ano, y = valor, color = pais, group = pais)) +
   geom_line() +
   geom_point() +
-  labs(x = "Ano", y = "Valor", title = "Gráfico de Linhas") +
+  labs(x = "Year", y = "Gender Wage Gap", title = "Line Graph") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Adicionando rótulos para os anos e os números finais
+
 grafico_final <- grafico_linhas +
   geom_text(data = subset(dados, ano %in% unique(ano)), aes(label = valor), hjust = 0, vjust = -0.5, size = 3)
 
