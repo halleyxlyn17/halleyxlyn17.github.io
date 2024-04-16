@@ -38,6 +38,7 @@ graphicss <- ggplot(dados, aes(x = year, y = gap, color = country, label = code_
 print(graphicss)
 
 ```
+
 Second, here is a rougher plot.
 
 ```{r}
