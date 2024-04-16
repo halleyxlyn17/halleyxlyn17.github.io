@@ -157,8 +157,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>About this site Welcome to Xulin’s Website!</p>
-<p>Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women.</p>
+<p>Welcome to Xulin’s Website!</p>
+<p>Introduction: Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women.</p>
 <p>Despite progress in recent decades, these gaps continue to persist, albeit to a lesser extent than before. This dataset delves into the intricate landscape of economic gender inequality, exploring its dimensions.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/Users/halleyzhou/Documents/gendergapinaverage new.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -188,6 +188,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>As shown in the scatter plot, the advancement of years and the gender wage gap experiences a downward-sloping trend.</p>
+<p>Possible reasons for this include:</p>
+<ol type="1">
+<li>Legistrative measures like equity laws and policies</li>
+<li>Initiatives aimed at promoting work-life balance, such as affordable childcare and parental leave policies</li>
+<li>fostering a culture of diversity and inclusion within organizations</li>
+</ol>
+<p>However,as shown in the scatterplot, the gender wage gap varies greatly between countries, and the variation grows steeply as time advances.</p>
+<p>The following analysis visualizes this trend:</p>
 <p>Scatterplot App:</p>
 <iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/halleysapp/"></iframe>
 <p>Bar Chart App:</p>
@@ -210,8 +219,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/app_2/">
-</iframe>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the png package</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the path to the image file</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>image_path <span class="ot">&lt;-</span> <span class="st">"/Users/halleyzhou/Documents/WechatIMG323.png"</span>  <span class="co"># Replace with the path to your PNG file</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the PNG image</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>image <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(image_path)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the image</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">main =</span> <span class="st">""</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># The rasterImage() function allows you to place the image on the plot</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rasterImage</span>(image, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Source:https://www.kaggle.com/code/adityashakya2454/gender-economic-inequality</p>
+<p>Brazil, Argentina, Honduras, and Costa Rica show higher numbers, which could suggest either more accessible data or more significant concerns about gender wage disparities in these countries, prompting increased research and reporting on the subject.</p>
+<iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/app_2/"></iframe>
+<p>Conclusion: The persistence of economic gender inequality has far-reaching implications for individuals, communities, and economies as a whole. Beyond its moral imperative, achieving gender parity in the economy is critical for fostering inclusive growth and sustainable development. Empowering women economically not only enhances their individual well-being but also contributes to poverty reduction, economic productivity, and social cohesion. Moreover, closing the gender gap in employment and entrepreneurship unlocks untapped potential, driving innovation and competitiveness in the global market.</p>
 
 
 
