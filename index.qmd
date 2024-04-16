@@ -19,6 +19,7 @@ df = read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 First, Here is a scatterplot of the Years against Gender Wage Gap.
 
 ```{r}
+library(ggplot2)
 dados <- data.frame(
   country = c("Brazil", "Brazil", "Brazil", "Brazil", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Brazil", "Costa Rica", "Mexico", "Panama", "Uruguay", "Venezuela", "Brazil", "Chile"),
   code_country = c("BRA", "BRA", "BRA", "BRA", "BRA", "ARG", "BRA", "ARG", "BRA", "ARG", "BRA", "BRA", "CRI", "MEX", "PAN", "URY", "VEN", "BRA", "CHL"),
