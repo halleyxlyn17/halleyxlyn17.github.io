@@ -127,7 +127,7 @@ dados <- data.frame(
 grafico_dispersao <- ggplot(dados, aes(x = ano, y = valor, color = pais, label = codigo_pais)) +
   geom_point(size = 3) +
   geom_text(size = 3, vjust = -0.5) +
-  labs(x = "Ano", y = "Valor", title = "Gráfico de Dispersão", color = "País") +
+  labs(x = "Year", y = "Gender_Wage_Gap", title = "Scatterplot_2", color = "País") +
   theme_minimal() +
   theme(legend.position = "right")
 
