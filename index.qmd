@@ -2,10 +2,11 @@
 title: "halleyxlyn17.github.io"
 ---
 
-Welcome to Xulin's Website!
+# Welcome to Xulin's Website!
 
-Introduction:
-Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women. 
+## Introduction:
+
+Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women.
 
 Despite progress in recent decades, these gaps continue to persist, albeit to a lesser extent than before. This dataset delves into the intricate landscape of economic gender inequality, exploring its dimensions.
 
@@ -13,6 +14,9 @@ Despite progress in recent decades, these gaps continue to persist, albeit to a 
 df = read.csv("/Users/halleyzhou/Documents/gendergapinaverage new.csv")
 ```
 
+# Visualization &Analysis
+
+First, Here is a scatterplot of the Years against Gender Wage Gap.
 
 ```{r}
 library(ggplot2)
@@ -38,22 +42,17 @@ ggplot(data, aes(x=Year, y = Gender.wage.gap..)) +
 
 ```
 
-As shown in the scatter plot, the advancement of years and the gender wage gap experiences a downward-sloping trend.
+As shown in the scatter plot, the advancement of years and the gender wage gap experiences a [*downward-sloping trend.*]{.underline}
 
 Possible reasons for this include:
 
-1) Legistrative measures like equity laws and policies
-2) Initiatives aimed at promoting work-life balance, such as affordable childcare and parental leave policies
-3) fostering a culture of diversity and inclusion within organizations
+1)  Legistrative measures like equity laws and policies
+2)  Initiatives aimed at promoting work-life balance, such as affordable childcare and parental leave policies
+3)  fostering a culture of diversity and inclusion within organizations
 
 However,as shown in the scatterplot, the gender wage gap varies greatly between countries, and the variation grows steeply as time advances.
 
 The following analysis visualizes this trend:
-
-
-
-
-
 
 Scatterplot App:
 
@@ -61,12 +60,11 @@ Scatterplot App:
 <iframe height = "400" width = "100%" src = "https://harleyxlyn17.shinyapps.io/halleysapp/"></iframe>
 ```
 Bar Chart App:
+
 ```{=html}
 <iframe height = "400" width = "100%" src =
 "https://harleyxlyn17.shinyapps.io/app_3/"></iframe>
-
 ```
-
 ```{r}
 
 # Load the png package
@@ -101,16 +99,24 @@ rasterImage(image, 1, 1, 2, 2)
 
 ```
 
-Source:https://www.kaggle.com/code/adityashakya2454/gender-economic-inequality
+*Source:https://www.kaggle.com/code/adityashakya2454/gender-economic-inequality*
 
 Brazil, Argentina, Honduras, and Costa Rica show higher numbers, which could suggest either more accessible data or more significant concerns about gender wage disparities in these countries, prompting increased research and reporting on the subject.
-
-
 
 ```{=html}
 <iframe height = "400" width = "100%" src =
 "https://harleyxlyn17.shinyapps.io/app_2/"></iframe>
 ```
+In further analysis of these four countries above, we can see that the wage gap of Brazil, Argentina, Honduras all display a downward sloping trend.
 
-Conclusion:
-The persistence of economic gender inequality has far-reaching implications for individuals, communities, and economies as a whole. Beyond its moral imperative, achieving gender parity in the economy is critical for fostering inclusive growth and sustainable development. Empowering women economically not only enhances their individual well-being but also contributes to poverty reduction, economic productivity, and social cohesion. Moreover, closing the gender gap in employment and entrepreneurship unlocks untapped potential, driving innovation and competitiveness in the global market.
+Costa Rica, on the other hand, shows a sharp increase in the gap in recent years. Similar countries like Peru also display such trend.
+
+This indicates that Central America and South American countries have a higher tendency of a wider gender gap.
+
+According to UNU Wider \[1\], Gender disparities in Latin America are significant. Women's labor force participation rate is 27 percentage points below that of men; women earn 17% less per hour than men with similar education and experience, and they hold less than 40% of top-level positions.
+
+# Conclusion: 
+
+The ongoing economic gender inequality impacts individuals, communities, and entire economies. Achieving gender equality in the economy is not only a moral duty but is crucial for promoting inclusive growth and long-term development. Empowering women economically boosts their personal well-being and aids in reducing poverty, enhancing productivity, and strengthening social cohesion. Additionally, bridging the gender gap in employment and entrepreneurship reveals untapped opportunities, encouraging innovation and boosting competitiveness in the global market.
+
+Reference: \[1\] “UNU-WIDER : Blog : Motherhood and the Gender Gap in Latin America.” UNU WIDER, 12 Aug. 2020, www.wider.unu.edu/publication/motherhood-and-gender-gap-latin-america.

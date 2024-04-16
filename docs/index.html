@@ -135,7 +135,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-xulins-website" id="toc-welcome-to-xulins-website" class="nav-link active" data-scroll-target="#welcome-to-xulins-website">Welcome to Xulin’s Website!</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction:</a></li>
+  </ul></li>
+  <li><a href="#visualization-analysis" id="toc-visualization-analysis" class="nav-link" data-scroll-target="#visualization-analysis">Visualization &amp;Analysis</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion:</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -157,12 +168,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Welcome to Xulin’s Website!</p>
-<p>Introduction: Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women.</p>
+<section id="welcome-to-xulins-website" class="level1">
+<h1>Welcome to Xulin’s Website!</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>Economic gender inequality has long been a pervasive issue, manifesting in disparities in pay, job opportunities, and wealth accumulation between men and women.</p>
 <p>Despite progress in recent decades, these gaps continue to persist, albeit to a lesser extent than before. This dataset delves into the intricate landscape of economic gender inequality, exploring its dimensions.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/Users/halleyzhou/Documents/gendergapinaverage new.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+</section>
+<section id="visualization-analysis" class="level1">
+<h1>Visualization &amp;Analysis</h1>
+<p>First, Here is a scatterplot of the Years against Gender Wage Gap.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -188,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>As shown in the scatter plot, the advancement of years and the gender wage gap experiences a downward-sloping trend.</p>
+<p>As shown in the scatter plot, the advancement of years and the gender wage gap experiences a <u><em>downward-sloping trend.</em></u></p>
 <p>Possible reasons for this include:</p>
 <ol type="1">
 <li>Legistrative measures like equity laws and policies</li>
@@ -201,7 +220,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/halleysapp/"></iframe>
 <p>Bar Chart App:</p>
 <iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/app_3/"></iframe>
-
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the png package</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
@@ -236,12 +254,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Source:https://www.kaggle.com/code/adityashakya2454/gender-economic-inequality</p>
+<p><em>Source:https://www.kaggle.com/code/adityashakya2454/gender-economic-inequality</em></p>
 <p>Brazil, Argentina, Honduras, and Costa Rica show higher numbers, which could suggest either more accessible data or more significant concerns about gender wage disparities in these countries, prompting increased research and reporting on the subject.</p>
 <iframe height="400" width="100%" src="https://harleyxlyn17.shinyapps.io/app_2/"></iframe>
-<p>Conclusion: The persistence of economic gender inequality has far-reaching implications for individuals, communities, and economies as a whole. Beyond its moral imperative, achieving gender parity in the economy is critical for fostering inclusive growth and sustainable development. Empowering women economically not only enhances their individual well-being but also contributes to poverty reduction, economic productivity, and social cohesion. Moreover, closing the gender gap in employment and entrepreneurship unlocks untapped potential, driving innovation and competitiveness in the global market.</p>
+<p>In further analysis of these four countries above, we can see that the wage gap of Brazil, Argentina, Honduras all display a downward sloping trend.</p>
+<p>Costa Rica, on the other hand, shows a sharp increase in the gap in recent years. Similar countries like Peru also display such trend.</p>
+<p>This indicates that Central America and South American countries have a higher tendency of a wider gender gap.</p>
+<p>According to UNU Wider [1], Gender disparities in Latin America are significant. Women’s labor force participation rate is 27 percentage points below that of men; women earn 17% less per hour than men with similar education and experience, and they hold less than 40% of top-level positions.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion:</h1>
+<p>The ongoing economic gender inequality impacts individuals, communities, and entire economies. Achieving gender equality in the economy is not only a moral duty but is crucial for promoting inclusive growth and long-term development. Empowering women economically boosts their personal well-being and aids in reducing poverty, enhancing productivity, and strengthening social cohesion. Additionally, bridging the gender gap in employment and entrepreneurship reveals untapped opportunities, encouraging innovation and boosting competitiveness in the global market.</p>
+<p>Reference: [1] “UNU-WIDER : Blog : Motherhood and the Gender Gap in Latin America.” UNU WIDER, 12 Aug.&nbsp;2020, www.wider.unu.edu/publication/motherhood-and-gender-gap-latin-america.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
