@@ -117,14 +117,14 @@ According to UNU Wider \[1\], Gender disparities in Latin America are significan
 
 ```{r}
 dados <- data.frame(
-  pais = c("Brazil", "Brazil", "Brazil", "Brazil", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Brazil", "Costa Rica", "Mexico", "Panama", "Uruguay", "Venezuela", "Brazil", "Chile"),
+  country = c("Brazil", "Brazil", "Brazil", "Brazil", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Argentina", "Brazil", "Brazil", "Costa Rica", "Mexico", "Panama", "Uruguay", "Venezuela", "Brazil", "Chile"),
   codigo_pais = c("BRA", "BRA", "BRA", "BRA", "BRA", "ARG", "BRA", "ARG", "BRA", "ARG", "BRA", "BRA", "CRI", "MEX", "PAN", "URY", "VEN", "BRA", "CHL"),
-  ano = c(1981, 1982, 1983, 1984, 1985, 1986, 1986, 1987, 1987, 1988, 1988, 1989, 1989, 1989, 1989, 1989, 1989, 1990, 1990),
-  valor = c(34.21, 33.66, 35.75, 34.04, 28.58, 15.79, 34.69, 12.5, 32.01, 11.31, 30.88, 33.33, 4.55, 20.58, 18.18, 22.22, 11.78, 26.11, 26.45)
+  year = c(1981, 1982, 1983, 1984, 1985, 1986, 1986, 1987, 1987, 1988, 1988, 1989, 1989, 1989, 1989, 1989, 1989, 1990, 1990),
+  gap = c(34.21, 33.66, 35.75, 34.04, 28.58, 15.79, 34.69, 12.5, 32.01, 11.31, 30.88, 33.33, 4.55, 20.58, 18.18, 22.22, 11.78, 26.11, 26.45)
 )
 
-# Criando o gráfico de dispersão
-grafico_dispersao <- ggplot(dados, aes(x = ano, y = valor, color = pais, label = codigo_pais)) +
+
+grafico_dispersao <- ggplot(dados, aes(x = year, y = gap, color = country, label = codigo_pais)) +
   geom_point(size = 3) +
   geom_text(size = 3, vjust = -0.5) +
   labs(x = "Year", y = "Gender_Wage_Gap", title = "Scatterplot_2", color = "Countries") +
