@@ -143,7 +143,7 @@ print(graphicss)
 library(ggplot2)
 
 # Dados fornecidos
-dados <- data.frame(
+this <- data.frame(
   country = c("Honduras", "Nicaragua", "Argentina", "Belize", "Costa Rica", "Honduras", "Mexico", "Argentina", "Brazil", "Costa Rica", "Honduras", "Panama", "Uruguay", "Venezuela", "Argentina", "Brazil", "Chile", "Costa Rica", "Dominican Republic", "Honduras"),
   code_country = c("HND", "NIC", "ARG", "BLZ", "CRI", "HND", "MEX", "ARG", "BRA", "CRI", "HND", "PAN", "URY", "VEN", "ARG", "BRA", "CHL", "CRI", "DOM", "HND"),
   year = c(1993, 1993, 1994, 1994, 1994, 1994, 1994, 1995, 1995, 1995, 1995, 1995, 1995, 1995, 1996, 1996, 1996, 1996, 1996, 1996),
@@ -151,7 +151,7 @@ dados <- data.frame(
 )
 
 
-Graphs <- ggplot(dados, aes(x = year, y = Wage_Gap, color = country, group = country)) +
+Graphs <- ggplot(this, aes(x = year, y = Wage_Gap, color = country, group = country)) +
   geom_line() +
   geom_point() +
   labs(x = "Year", y = "Gender Wage Gap", title = "Line Graph") +
@@ -160,7 +160,7 @@ Graphs <- ggplot(dados, aes(x = year, y = Wage_Gap, color = country, group = cou
 
 
 graphic_final <- Graphs +
-  geom_text(data = subset(dados, year %in% unique(year)), aes(label = Wage_Gap), hjust = 0, vjust = -0.5, size = 3)
+  geom_text(data = subset(this, year %in% unique(year)), aes(label = Wage_Gap), hjust = 0, vjust = -0.5, size = 3)
 
 print(graphic_final)
 ```
